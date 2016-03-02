@@ -20,7 +20,7 @@ User.prototype.save = function(callback){
 			return callback(err);  //错误，返回err信息
 		}
 
-		db.collection('user',function(err,collection){
+		db.collection('users',function(err,collection){
 			if(err){
 				mongodb.close();
 				return callback(err);
@@ -33,7 +33,7 @@ User.prototype.save = function(callback){
 				if(err){
 					return callback(err);
 				}
-				callback(null,user[0])
+				callback(null,user[0]);
 			})
 		})
 	})
@@ -46,6 +46,7 @@ User.get = function(name,callback){
 		}
 
 		db.collection('users',function(err,collection){
+
 			if(err){
 				mongodb.close();
 				return callback(err);
