@@ -11,7 +11,17 @@ var users = require('./routes/users');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var flash = require('connect-flash');
-
+var multer =require('multer');
+var storage = multer.diskStorage({
+  destination: function(req,file,cb){
+    cb(null,'./public/images/user')
+  },
+  filename: function(req,file,cb){
+    cb(null,file.originalname)
+  }
+});
+var upload = multer({storage: storage});
+var cpUpload = upload.any();
 
 var app = express();
 
@@ -40,6 +50,8 @@ app.use(session({
   })
 }));
 app.use(flash());
+app.use(cpUpload);
+
 routes(app);
 
 app.listen(app.get('port'),function(){
