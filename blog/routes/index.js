@@ -260,6 +260,22 @@ module.exports = function(app){
 			req.flash('success',"留言成功");
 			res.redirect('back');
 		});
+	});
+
+	app.get('/archive',function(req,res){
+		Post.getArchive(function(err,posts){
+			if(err){
+				req.flash('error',error);
+				return res.redirect('/');
+			}
+			res.render('archive',{
+				title: '存档',
+				posts: posts,
+				user: req.session.user,
+				success: req.flash('success').toString(),
+				error: req.flash('error').toString()
+			})
+		})
 	})
 	function checkLogin(req,res,next){
 		if(!req.session.user){
