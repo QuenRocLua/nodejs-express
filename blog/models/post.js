@@ -52,7 +52,39 @@ Post.prototype.save = function(callback){
 	})
 }
 
-Post.getAll = function(name,callback){
+// Post.getAll = function(name,callback){
+// 	mongodb.open(function(err,db){
+// 		if(err){
+// 			return callback(err);
+// 		}
+
+// 		db.collection('postslist',function(err,collection){
+// 			if(err){
+// 				mongodb.close();
+// 				return callback(err);
+// 			}
+// 			var query = {};
+// 			if(name){
+// 				query.name = name;
+// 			}
+
+// 			collection.find(query).sort({
+// 				time: -1
+// 			}).toArray(function(err,docs){
+// 				mongodb.close();
+// 				if(err){
+// 					return callback(err);
+// 				}
+// 				docs.forEach(function(doc){
+// 					doc.post = markdown.toHTML(doc.post);
+// 				})
+// 				callback(null,docs);
+// 			})
+// 		})
+// 	})
+// }
+
+Post.getTen = function(name,page,callback){
 	mongodb.open(function(err,db){
 		if(err){
 			return callback(err);
@@ -63,25 +95,33 @@ Post.getAll = function(name,callback){
 				mongodb.close();
 				return callback(err);
 			}
+
 			var query = {};
 			if(name){
 				query.name = name;
 			}
 
-			collection.find(query).sort({
-				time: -1
-			}).toArray(function(err,docs){
-				mongodb.close();
-				if(err){
-					return callback(err);
-				}
-				docs.forEach(function(doc){
-					doc.post = markdown.toHTML(doc.post);
-				})
-				callback(null,docs);
-			})
-		})
-	})
+			collection.count(query,function(err,total){
+				//根据query对象查询，并跳过钱(page-1)*10个结果，返回之后的10个结果
+				collection.find(query,{
+					skip: (page - 1)*10,
+					limit: 10
+				}).sort({
+					time: -1
+				}).toArray(function(err,docs){
+					mongodb.close();
+					if(err){
+						return callback(err);
+					}
+
+					docs.forEach(function(doc){
+						doc.post = markdown.toHTML(doc.post);
+					});
+					callback(null,docs,total);
+				});
+			});
+		});
+	});
 }
 
 Post.getOne = function(name,day,title,callback){
