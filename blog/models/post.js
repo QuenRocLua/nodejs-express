@@ -329,3 +329,33 @@ Post.getTag = function(tag,callback){
 	})
 }
 
+Post.search = function(keyword,callback){
+	mongodb.open(function(err,db){
+		if(err){
+			callback(err);
+		}
+		db.collection('postslist',function(err,collection){
+			if(err){
+				mongodb.close();
+				return callback(err);
+			}
+			var pattern = new RegExp(keyword,'i');
+			collection.find({
+				"title": pattern
+			},{
+				"name": 1,
+				"time": 1,
+				"title": 1
+			}).sort({
+				time: -1
+			}).toArray(function(err,docs){
+				mongodb.close();
+				if(err){
+					callback(err);
+				}
+				callback(null,docs);
+			})
+		})
+	})
+}
+
