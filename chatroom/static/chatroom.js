@@ -4,9 +4,22 @@ angular.module('chatroomApp',["ngRoute"]).run(function($window, $rootScope, $htt
 		method: 'GET'
 	}).success(function(user){
 		$rootScope.me = user;
-		$location.path('/')
+		$location.path('/');
 	}).error(function(data){
 		$location.path('/login');
+	})
+
+	$rootScope.logout = function(){
+		$http ({
+			url: '/api/logout',
+			method: 'GET'
+		}).success(function(){
+			$rootScope.me = null;
+			$location.path('/login')
+		})
+	}
+	$rootScope.$on('login',function(evt,me){
+		$rootScope.me = me;
 	})
 })
 

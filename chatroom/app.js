@@ -47,17 +47,19 @@ io.sockets.on('connection',function(socket){
 
 app.get('/api/validate',function(req,res){
 	var userId = req.session._userId;
-
+	console.log(userId);
 	if(userId){
-		Controllers.User.findUserById(_userId,function(err,user){
+		Controllers.User.findUserById(userId,function(err,user){
 			if(err){
 				res.json(401,{
 					msg: err
 				})
 			}else{
-				res.json(401,null)
+				res.json(user)
 			}
 		})
+	}else{
+		res.json(401,null)
 	}
 })
 
@@ -70,9 +72,12 @@ app.post('/api/login',function(req,res){
 					msg: err
 				})
 			}else{
-				res.json(403)
+				req.session._userId = user._id;
+				res.json(user)
 			}
 		})
+	}else{
+		res.json(403)
 	}
 })
 

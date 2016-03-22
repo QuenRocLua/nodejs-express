@@ -1,4 +1,4 @@
-angular.module('chatroomApp').config(function($routeProvider, $locationProvider){
+angular.module('chatroomApp').config(['$routeProvider','$locationProvider',function($routeProvider, $locationProvider){
 	$locationProvider.html5Mode(true);
 	$routeProvider.when('/',{
 		templateUrl: '/pages/room.html',
@@ -9,4 +9,4 @@ angular.module('chatroomApp').config(function($routeProvider, $locationProvider)
 	}).otherwise({
 		redirectTo: '/login'
 	})
-})
+}])
