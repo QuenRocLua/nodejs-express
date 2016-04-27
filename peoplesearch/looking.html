@@ -1,0 +1,131 @@
+<!--发布寻人-被寻者填写-->
+<div class="bg">
+    <h4>被寻者信息<span>（标*为必填选项）</span></h4>
+    <div class="info">
+        <label>姓名*<input type="text" id="name"></label>
+        <label>性别*<input type="radio" name="sex" value="男">男<input type="radio" name="sex" value="女">女</label>
+        <label>年龄*<input type="text" id="age"></label>
+        <label>被寻者照片<span>（最多可上传6张）</span></label>
+        <ul class="photo-contain">
+            <li>
+                <img src="images/pic.jpg">
+            </li>
+            <li>
+                <img src="images/pic.jpg">
+            </li>
+            <li>
+                <img src="images/pic.jpg">
+            </li>
+            <li>
+                <img src="images/pic.jpg">
+            </li>
+            <li class="add-photo">
+                <img src="images/add-photo.png">
+                <input type="file">
+            </li>
+        </ul>
+        <label>基本特征<span>（至少填1项，有利于信息匹配）</span></label>
+        <div class="body-shape">
+            <label>身高
+                <select>
+                    <option>160</option>
+                    <option>170</option>
+                    <option>180</option>
+                </select>cm
+            </label>
+            <label>体重
+                <select>
+                    <option>50</option>
+                    <option>60</option>
+                    <option>70</option>
+                </select>kg
+            </label>
+            <label>体态
+                <select>
+                    <option>胖</option>
+                    <option>微胖</option>
+                    <option>适中</option>
+                    <option>偏瘦</option>
+                    <option>瘦</option>
+                </select>
+            </label>
+        </div>
+        <label>备注说明<textarea></textarea></label>
+    </div>
+    <a class="green-btn" id="test1">下一步</a>
+</div>
+<!--发布寻人-寻人者填写-->
+<div class="bg" style="display: none;">
+    <h4>寻人者信息<span>（标*为必填选项）</span></h4>
+    <div class="info">
+        <label>姓名*<input type="text"></label>
+        <label>电话*<input type="text"></label>
+        <p class="tips0">请填写您的真实姓名和联系方式，有助于被寻人联系您。本信息仅用于寻人不作他用，请放心。</p>
+    </div>
+    <a class="green-btn">确认</a>
+</div>
+<!--发布寻人-确认页-->
+<div class="bg" style="display: none;">
+    <h4>被寻者信息</h4>
+    <div class="card-info">
+        <p>姓名<span>李笑笑</span></p>
+        <p>性别<span>女</span></p>
+        <p>年龄<span>27</span></p>
+        <a class="card-head">
+            <img src="images/pic.jpg">
+        </a>
+        <p>基本特征<br/><span class="posture">身高165cm</span><span class="posture">体重45kg</span><span class="posture">体态偏瘦</span></p>
+        <p>备注说明<span class="remark">家人不要担心，一家三口都很好，没有受伤情况！家人不要担心，一家三口都很好，没有受伤情况！家人不要担心，一家三口都很好，没有受伤情况！</span></p>
+    </div>
+    <h4>寻人者信息</h4>
+    <div class="card-info">
+        <p>姓名<span>张嘉佳</span></p>
+        <p>联系电话<span>15344999090</span></p>
+    </div>
+    <a class="alter-btn">修改</a>
+    <a class="submit-btn">提交</a>
+</div>
+<!--发布寻人-详情页-->
+<div class="bg" style="display: none;">
+    <p class="page-see-num">已有<span>899</span>人查看本信息</p>
+    <h4>被寻者信息</h4>
+    <div class="card-info">
+        <p>姓名<span>李笑笑</span></p>
+        <p>性别<span>女</span></p>
+        <p>年龄<span>27</span></p>
+        <a href="https://www.baidu.com" class="card-head">
+            <img src="images/pic.jpg">
+            <span>查看更多</span>
+        </a>
+        <p>基本特征<br/><span class="posture">身高165cm</span><span class="posture">体重45kg</span><span class="posture">体态偏瘦</span></p>
+        <p>备注说明<span class="remark">家人不要担心，一家三口都很好，没有受伤情况！家人不要担心，一家三口都很好，没有受伤情况！家人不要担心，一家三口都很好，没有受伤情况！</span></p>
+    </div>
+    <h4>寻人者信息</h4>
+    <div class="card-info">
+        <p>姓名<span>张嘉佳</span></p>
+        <p>联系电话<span>15344999090</span></p>
+    </div>
+    <a class="green-btn">返回</a>
+</div>
+<!--发布寻人－有反馈-->
+<div class="bg" style="display: none;">
+    <p class="tips">根据您提供的资料，已为您自动匹配一下相关信息：</p>
+    <div class="card-info">
+        <p>姓名<span>李笑笑</span></p>
+        <a href="https://www.baidu.com" class="compare-btn">查看详情</a>
+    </div>
+    <div class="card-info">
+        <p>姓名<span>李笑笑</span></p>
+        <p>电话<span>15288990303<img src="images/phone-icon.png"></span></p>
+        <a href="https://www.baidu.com" class="compare-btn">查看详情</a>
+    </div>
+    <a class="green-btn">寻人平安墙</a>
+</div>
+<!--发布寻人－无反馈-->
+<div class="bg" style="display: none;">
+    <div class="card-bg">
+        <img src="images/blue-icon.png">
+        <p>暂时未找到和您寻找信息匹配的人，您可以通过寻人信息墙，实时关注最新寻人动态。</p>
+    </div>
+    <a class="green-btn">返回</a>
+</div>

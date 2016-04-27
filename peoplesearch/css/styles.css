@@ -1,0 +1,490 @@
+/*basie element css*/
+body,dd,dl,dt,h1,h2,h3,h4,html,li,p,ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+html{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+}
+body{
+    max-width: 640px;
+    width: 100%;
+    height:100%;
+    margin: 0 auto;
+}
+a,input,select,textarea{
+    outline: none;
+    border: none;
+}
+a{
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+    display:none;width:0;
+}
+
+/*btn element css*/
+.green-btn{
+    display:inline-block;
+    width: 60%;
+    margin-left:20%;
+    margin-top:2rem;
+    margin-bottom:2rem;
+    padding:1rem 0;
+    background-color:#b0d48a;
+    color: #ffffff;
+    font-size:1.5rem;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+.alter-btn{
+    display:inline-block;
+    width: 40%;
+    margin-left:5%;
+    margin-top:2rem;
+    margin-bottom:2rem;
+    padding:1rem 0;
+    background-color:#b0d48a;
+    color: #ffffff;
+    font-size:1.5rem;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+.submit-btn{
+    display:inline-block;
+    width: 40%;
+    margin-left:9%;
+    margin-top:2rem;
+    margin-bottom:2rem;
+    padding:1rem 0;
+    background-color:#8aadd3;
+    color: #ffffff;
+    font-size:1.5rem;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+.compare-btn{
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    padding:0.8rem 1.5rem;
+    background-color:#b0d48a;
+    color: #ffffff;
+    font-size:1.5rem;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+
+/*special element css*/
+.homepage{
+    position:relative;
+    width:100%;
+    margin:0 auto;
+    padding:.2px;
+    background-image: url("../images/bg.jpg");
+    background-size: 100% 100%;
+}
+.homepage .logo{
+    width:7.7rem;
+    height:2.5rem;
+    margin-top:2.5rem;
+    margin-left:2rem;
+    background-image: url("../images/logo.png");
+    background-size: 100% 100%;
+}
+.homepage .title{
+    margin-top:10rem;
+    margin-left:2.2rem;
+    color:#4b5b3b;
+    font-family:"兰亭黑-简";
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 150%;
+}
+.homepage a{
+    display: block;
+    width: 20rem;
+    height: 3.5rem;
+    margin: 0 auto;
+}
+.homepage .i-search-btn{
+    margin-top:8rem;
+    background-image: url("../images/i-search-btn.png");
+    background-size: 100% 100%;
+}
+.homepage .help-search-btn{
+    margin-top:1rem;
+    background-image: url("../images/help-search-btn.png");
+    background-size: 100% 100%;
+}
+.homepage .see-info-btn{
+    margin-top:1rem;
+    background-image: url("../images/see-info-btn.png");
+    background-size: 100% 100%;
+}
+.homepage label{
+    display: block;
+    width: 20rem;
+    margin:1rem auto 0 auto;
+    color: #aaaaaa;
+    font-size:.94rem;
+    font-weight: 300;
+}
+.homepage label a{
+    display:inline;
+    margin-left:.5rem;
+    border-bottom:1px solid #aaaaaa;
+    vertical-align: middle;
+}
+.homepage label input{
+    margin-left:0;
+    vertical-align: middle;
+}
+.homepage .people-num{
+    margin:3.8rem auto 1rem auto;
+    color: #afd48a;
+    font-size:1rem;
+    text-align: center;
+}
+
+.bg{
+    position:relative;
+    width:100%;
+    min-height:100%;
+    background-color: #edeff3;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+h4{
+    padding:.8rem 1rem;
+    color: #788c5b;
+    font-size: 1.8rem;
+    font-weight: 200;
+    vertical-align: middle;
+}
+h4:before{
+    content:"";
+    display:inline-block;
+    width:.46rem;
+    height:.46rem;
+    margin-right:.2rem;
+    background-image: url("../images/blue-icon.png");
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+h4 span{
+    color: #8aadd3;
+    font-size: 1rem;
+}
+.info{
+    position:relative;
+    min-height:45rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+.info label{
+    display: block;
+    margin-left: 2rem;
+    padding:.5rem 0;
+    line-height: 3.5rem;
+    color: #aaaaaa;
+    font-size: 1.5rem;
+}
+.info label input,textarea,select{
+    color: #333333;
+}
+.info label input{
+    height:2rem;
+    margin-left:.8rem;
+    vertical-align: middle;
+}
+.info label input[type=text]{
+    width: 80%;
+    border-bottom: 1px solid #d6d6d6;
+    border-radius: 0;
+}
+.info label span{
+    font-size: 1rem;
+}
+.info label select{
+    width: 30%;
+    height:2rem;
+    margin: 0 .8rem;
+    border: 1px solid #cacaca;
+    border-radius: 0;
+    background-color: #ffffff;
+    vertical-align: middle;
+}
+.info label option{
+    padding: .5rem 0;
+    vertical-align: middle;
+}
+.info label textarea{
+    display:block;
+    width:90%;
+    height:8rem;
+    margin-bottom:1rem;
+    border: 1px solid #b0d48a;
+    resize: none;
+}
+.body-shape{
+    display:block;
+    margin-left: .8rem;
+}
+.body-shape label{
+    line-height: 2.5rem;
+}
+.photo-contain{
+    margin-left: 2rem;
+}
+.photo-contain li{
+    display: inline-block;
+    width: 7.5rem;
+    margin-top: .1rem;
+    margin-bottom: .1rem;
+}
+.photo-contain li img{
+    width: 100%;
+    border-radius: .4rem;
+}
+.photo-contain .add-photo{
+    position:relative;
+    width: 7.5rem;
+}
+.photo-contain .add-photo  img{
+    width: 100%;
+}
+.photo-contain .add-photo  input{
+    position:absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height:6rem;
+    opacity: 0;
+}
+.page-see-num{
+    padding:2rem 0 1rem 0;
+    font-size:2rem;
+    color:#aaaaaa;
+    text-align: center;
+}
+.page-see-num span{
+    color: #8aadd3;
+}
+.card-info{
+    position:relative;
+    width:90%;
+    margin:0 auto 1rem auto;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    border-top: 2px solid #b0d48a;
+    border-radius: 0.22rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 1px rgba(0,0,0,0.3);
+}
+.card-info p{
+    margin-left:1rem;
+    padding:0.5rem 0;
+    line-height: 2.5rem;
+    color: #aaaaaa;
+    font-size: 1.5rem;
+}
+.card-info p span{
+    margin-left:1rem;
+    color: #333333;
+    font-size: 1.3rem;
+}
+.card-info p span img{
+    width: 1.33rem;
+    height: 1.33rem;
+    margin-left:6rem;
+    vertical-align: middle;
+}
+.card-info .card-head{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    width: 8rem;
+    color:#8aadd3;
+    text-align: center;
+}
+.card-info .card-head img{
+    width: 100%;
+    border-radius: 0.4rem;
+}
+.card-info .card-head span{
+    padding-top:1px;
+    border-bottom: 1px solid #8aadd3;
+}
+.card-info .posture{
+    padding:0.3rem;
+    margin-left:0;
+    margin-right:1rem;
+    border: 1px dashed #788c5b;
+    border-radius: 0.5rem;
+    color:#788c5b;
+}
+.card-info .remark{
+    display: block;
+    margin:0.5rem 1rem 1rem 0;
+    line-height: 1.8rem;
+}
+.card-bg{
+    position: relative;
+    width: 90%;
+    min-height: 28rem;
+    margin:9rem auto 5rem auto;
+    border-radius: 0.22rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 1px rgba(0,0,0,0.3);
+}
+.card-bg img{
+    width:0.46rem;
+    height:0.46rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+.card-bg p{
+    width:90%;
+    margin:9rem auto 0 auto;
+    color:#8aadd3;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+.tips{
+    width:80%;
+    margin:4rem auto;
+    color: #aaaaaa;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.feedback-list{
+    width: 65%;
+    margin: 0 auto;
+}
+.feedback-list li{
+    color: #8aadd3;
+    margin-top:2rem;
+    font-size: 1.5rem;
+}
+.feedback-list li span{
+    padding: 0.5rem;
+    margin-left:1rem;
+    border: 1px solid #b0d48a;
+    border-radius: 0.3rem;
+    color: #35475f;
+}
+.feedback-list span img{
+    width: 1.33rem;
+    height: 1.33rem;
+    margin-left:6rem;
+    vertical-align: middle;
+}
+.tips0{
+    position:absolute;
+    left:10%;
+    bottom:2rem;
+    width:80%;
+    color: #8aadd3;
+    font-size: 1.5rem;
+    text-align:center;
+    line-height: 2rem;
+}
+.broadcast{
+    display: block;
+    padding: 1rem;
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 1.2rem;
+    font-family: 兰亭黑-简;
+    background-color: #b6cbe1;
+    text-align: center;
+
+}
+.my-messages{
+    float: right;
+    margin-top: .5rem;
+    margin-right: 1rem;
+}
+.my-messages img{
+    width: 2rem;
+    margin-left: 1rem;
+}
+.my-messages p{
+    font-size: 1rem;
+    color: #b6cbe1;
+}
+.bg0{
+    position:relative;
+    width:100%;
+    min-height:100%;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.list-bg{
+    width: 90%;
+    height: 40rem;
+    margin: 4rem auto 1rem auto;
+    background-image: url("../images/messages-bg.png");
+    background-size: 100% 100%;
+}
+.list-bg p{
+    padding:1.3rem .5rem;
+    color: #35475f;
+    text-align: center;
+    font-weight: 900;
+    font-size:1.5rem;
+    font-family: 兰亭黑-简;
+}
+.list-messages{
+    margin-top: 2rem;
+}
+.list-messages li{
+    position: relative;
+    width: 90%;
+    margin: 0 auto 1.2rem auto;
+    background-color: #FFFFFF;
+    padding: 1rem 0;
+    border-radius: .2rem;
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5);
+}
+.list-messages li span{
+    margin-left: 2rem;
+    color: #8aadd3;
+    font-size: 1.5rem;
+}
+.list-messages li.is-top:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display:inline-block;
+    width:1rem;
+    height:2rem;
+    /*margin-top: -1rem;*/
+    /*margin-left: 1rem;*/
+    /*margin-right:.2rem;*/
+    background-image: url("../images/istop-icon.png");
+    background-size: 100% 100%;
+    vertical-align: top;
+}
+.list-messages li span:nth-child(1){
+    margin-left: 1rem;
+    color: #35475f;
+}
+.list-messages li span:nth-child(1):before{
+    content: "";
+    display:inline-block;
+    width:.46rem;
+    height:.46rem;
+    margin-left: 1rem;
+    margin-right:.2rem;
+    background-image: url("../images/blue-icon.png");
+    background-size: 100% 100%;
+    vertical-align: top;
+}
