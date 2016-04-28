@@ -2,9 +2,16 @@
 <div class="bg">
     <h4>被寻者信息<span>（标*为必填选项）</span></h4>
     <div class="info">
-        <label>姓名*<input type="text" id="name"></label>
-        <label>性别*<input type="radio" name="sex" value="男">男<input type="radio" name="sex" value="女">女</label>
-        <label>年龄*<input type="text" id="age"></label>
+        <label>姓名*
+            <input type="text" id="name" ng-model="person.name">
+        </label>
+        <label>性别*
+            <input type="radio" name="sex" value="男" ng-model="person.sex">男
+            <input type="radio" name="sex" value="女" ng-model="person.sex">女
+        </label>
+        <label>年龄*
+            <input type="number" id="age" ng-model="person.age">
+        </label>
         <label>被寻者照片<span>（最多可上传6张）</span></label>
         <ul class="photo-contain">
             <li>
@@ -27,63 +34,32 @@
         <label>基本特征<span>（至少填1项，有利于信息匹配）</span></label>
         <div class="body-shape">
             <label>身高
-                <select>
-                    <option>160</option>
-                    <option>170</option>
-                    <option>180</option>
+                <select ng-model="person.character.height">
+                    <option value="160">160</option>
+                    <option value="170">170</option>
+                    <option value="180">180</option>
                 </select>cm
             </label>
             <label>体重
-                <select>
-                    <option>50</option>
-                    <option>60</option>
-                    <option>70</option>
+                <select ng-model="person.character.weight">
+                    <option value="50">50</option>
+                    <option value="60">60</option>
+                    <option value="70">70</option>
                 </select>kg
             </label>
             <label>体态
-                <select>
-                    <option>胖</option>
-                    <option>微胖</option>
-                    <option>适中</option>
-                    <option>偏瘦</option>
-                    <option>瘦</option>
+                <select ng-model="person.character.posture">
+                    <option value="胖">胖</option>
+                    <option value="微胖">微胖</option>
+                    <option value="适中">适中</option>
+                    <option value="偏瘦">偏瘦</option>
+                    <option value="瘦">瘦</option>
                 </select>
             </label>
         </div>
-        <label>备注说明<textarea></textarea></label>
+        <label>备注说明<textarea ng-model="person.remark"></textarea></label>
     </div>
-    <a class="green-btn" id="test1">下一步</a>
-</div>
-<!--发布寻人-寻人者填写-->
-<div class="bg" style="display: none;">
-    <h4>寻人者信息<span>（标*为必填选项）</span></h4>
-    <div class="info">
-        <label>姓名*<input type="text"></label>
-        <label>电话*<input type="text"></label>
-        <p class="tips0">请填写您的真实姓名和联系方式，有助于被寻人联系您。本信息仅用于寻人不作他用，请放心。</p>
-    </div>
-    <a class="green-btn">确认</a>
-</div>
-<!--发布寻人-确认页-->
-<div class="bg" style="display: none;">
-    <h4>被寻者信息</h4>
-    <div class="card-info">
-        <p>姓名<span>李笑笑</span></p>
-        <p>性别<span>女</span></p>
-        <p>年龄<span>27</span></p>
-        <a class="card-head">
-            <img src="images/pic.jpg">
-        </a>
-        <p>基本特征<br/><span class="posture">身高165cm</span><span class="posture">体重45kg</span><span class="posture">体态偏瘦</span></p>
-        <p>备注说明<span class="remark">家人不要担心，一家三口都很好，没有受伤情况！家人不要担心，一家三口都很好，没有受伤情况！家人不要担心，一家三口都很好，没有受伤情况！</span></p>
-    </div>
-    <h4>寻人者信息</h4>
-    <div class="card-info">
-        <p>姓名<span>张嘉佳</span></p>
-        <p>联系电话<span>15344999090</span></p>
-    </div>
-    <a class="alter-btn">修改</a>
-    <a class="submit-btn">提交</a>
+    <a class="green-btn" id="test1" ng-click="goNext()">下一步</a>
 </div>
 <!--发布寻人-详情页-->
 <div class="bg" style="display: none;">
@@ -129,3 +105,5 @@
     </div>
     <a class="green-btn">返回</a>
 </div>
+
+<p class="errortip" role="alert" id="errortip" style="display: none"></p>

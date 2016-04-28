@@ -1,0 +1,21 @@
+<!--发布寻人-确认页-->
+<div class="bg">
+    <h4>被寻者信息</h4>
+    <div class="card-info">
+        <p>姓名<span>{{confirm.person.name}}</span></p>
+        <p>性别<span>{{confirm.person.sex}}</span></p>
+        <p>年龄<span>{{confirm.person.age}}</span></p>
+        <a class="card-head">
+            <img src="{{confirm.person.image}}">
+        </a>
+        <p>基本特征<br/><span class="posture">身高{{confirm.person.character.height}}cm</span><span class="posture">体重{{confirm.person.character.weight}}kg</span><span class="posture">体态{{confirm.person.character.posture}}</span></p>
+        <p>备注说明<span class="remark">{{confirm.person.remark}}</span></p>
+    </div>
+    <h4>寻人者信息</h4>
+    <div class="card-info">
+        <p>姓名<span>{{confirm.personlooking.name}}</span></p>
+        <p>联系电话<span>{{confirm.personlooking.phone}}</span></p>
+    </div>
+    <a class="alter-btn" href="#/looking">修改</a>
+    <a class="submit-btn">提交</a>
+</div>

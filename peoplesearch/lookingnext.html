@@ -1,0 +1,16 @@
+<!--发布寻人-寻人者填写-->
+<div class="bg">
+    <h4>寻人者信息<span>（标*为必填选项）</span></h4>
+    <div class="info">
+        <label>姓名*
+        	<input type="text" ng-model="personlooking.name">
+        </label>
+        <label>电话*
+        	<input type="text" ng-model="personlooking.phone">
+        </label>
+        <p class="tips0">请填写您的真实姓名和联系方式，有助于被寻人联系您。本信息仅用于寻人不作他用，请放心。</p>
+    </div>
+    <a class="green-btn" ng-click="infoConfirm()">确认</a>
+</div>
+
+<p class="errortip" role="alert" id="errortip" style="display: none"></p>

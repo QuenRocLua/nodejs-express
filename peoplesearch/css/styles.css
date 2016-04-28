@@ -201,7 +201,8 @@ h4 span{
     margin-left:.8rem;
     vertical-align: middle;
 }
-.info label input[type=text]{
+.info label input[type=text],
+.info label input[type=number]{
     width: 80%;
     border-bottom: 1px solid #d6d6d6;
     border-radius: 0;
@@ -487,4 +488,16 @@ h4 span{
     background-image: url("../images/blue-icon.png");
     background-size: 100% 100%;
     vertical-align: top;
+}
+
+.errortip{
+    position: fixed;
+    width: 90%;
+    font-size: 2rem;
+    top: 30%;
+    left: 5%;
+    line-height: 4rem;
+    text-align: center;
+    background: #999999;
+    border-radius: 4px;
 }
