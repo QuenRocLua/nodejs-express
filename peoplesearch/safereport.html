@@ -1,0 +1,45 @@
+<!--自报平安-填写页-->
+<div class="bg">
+    <h4>自报平安信息<span>（标*为必填选项）</span></h4>
+    <div class="info">
+        <label>姓名*
+            <input type="text" ng-model="reportinfo.name">
+        </label>
+        <label>性别*
+            <input type="radio" name="sex" value="男" ng-model="reportinfo.sex">男
+            <input type="radio" name="sex" value="女" ng-model="reportinfo.sex">女
+        </label>
+        <label>年龄*
+            <input type="number" ng-model="reportinfo.age">
+        </label>
+        <label>电话*
+            <input type="number" ng-model="reportinfo.phone">
+        </label>
+        <label>地址*
+            <input type="text" ng-model="reportinfo.address">
+        </label>
+        <label>报平安照片
+            <span>（最多可上传6张）</span>
+        </label>
+        <ul class="photo-contain">
+            <li>
+                <img src="images/pic.jpg">
+            </li>
+            <li>
+                <img src="images/pic.jpg">
+            </li>
+            <li>
+                <img src="images/pic.jpg">
+            </li>
+            <li>
+                <img src="images/pic.jpg">
+            </li>
+            <li class="add-photo">
+                <img src="images/add-photo.png">
+                <input type="file">
+            </li>
+        </ul>
+        <label>备注说明<textarea ng-model="reportinfo.remark"></textarea></label>
+    </div>
+    <a class="green-btn" ng-click="confirmInfoes()">确认</a>
+</div>

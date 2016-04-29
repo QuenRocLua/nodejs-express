@@ -21,9 +21,11 @@
         document.querySelector('html').style.fontSize = document.body.clientWidth/360*10 + "px";
     </script>
     
-    <div ng-view></div>
+    <ng-view></ng-view>
     
+    <p class="errortip" role="alert" id="errortip" style="display: none"></p>
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="js/controllers.js"></script>
 </body>
 </html>

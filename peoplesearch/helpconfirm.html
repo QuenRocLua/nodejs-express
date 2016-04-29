@@ -1,0 +1,23 @@
+<!--帮助寻人-确认页-->
+<div class="bg">
+    <h4>被救助者信息</h4>
+    <div class="card-info">
+        <p>姓名<span>{{helpconfirm.helped.name}}</span></p>
+        <p>性别<span>{{helpconfirm.helped.sex}}</span></p>
+        <p>年龄<span>{{helpconfirm.helped.age}}</span></p>
+        <p>所在地址<span>{{helpconfirm.helped.address}}</span></p>
+        <a class="card-head">
+            <img ng-src="{{helpconfirm.helped.images[0]}}">
+        </a>
+        <p>基本特征<br/><span class="posture">身高{{helpconfirm.helped.character.height}}cm</span><span class="posture">体重{{helpconfirm.helped.character.weight}}kg</span><span class="posture">体态{{helpconfirm.helped.character.posture}}</span></p>
+        <p>备注说明<span class="remark">{{helpconfirm.helped.remark}}</span></p>
+    </div>
+    <h4>帮助者信息</h4>
+    <div class="card-info">
+        <p>姓名<span>{{helpconfirm.helpinfo.name}}</span></p>
+        <p>电话<span>{{helpconfirm.helpinfo.phone}}</span></p>
+        <p>身份证号<span>{{helpconfirm.helpinfo.id}}</span></p>
+    </div>
+    <a class="alter-btn" href="#/help">修改</a>
+    <a class="submit-btn" ng-click="submit()">提交</a>
+</div>

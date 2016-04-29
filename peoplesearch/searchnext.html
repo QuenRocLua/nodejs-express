@@ -1,0 +1,49 @@
+<!--搜索寻人-选项填写-->
+<div class="bg">
+    <h4>寻人搜索项</h4>
+    <div class="info">
+        <label>姓名
+            <input type="text" ng-model="searchedinfo.name">
+        </label>
+        <label>性别
+            <input type="radio" name="sex" value="男" ng-model="searchedinfo.sex">男
+            <input type="radio" name="sex" value="女" ng-model="searchedinfo.sex">女
+        </label>
+        <label>年龄
+            <input style="width: 5rem;margin-right:1rem;border: 1px solid #788c5b;border-radius: 0;" type="number" ng-model="searchedinfo.age.from">
+            至
+            <input style="width: 5rem;margin-right:1rem;border: 1px solid #788c5b;border-radius: 0;" type="number" ng-model="searchedinfo.age.to">岁
+        </label>
+        <label>电话
+            <input type="number" ng-model="searchedinfo.phone">
+        </label>
+        <label>基本特征</label>
+        <div class="body-shape">
+            <label>身高
+                <select ng-model="searchedinfo.character.height">
+                    <option value="160">160</option>
+                    <option value="170">170</option>
+                    <option value="180">180</option>
+                </select>cm
+            </label>
+            <label>体重
+                <select ng-model="searchedinfo.character.weight">
+                    <option value="50">50</option>
+                    <option value="60">60</option>
+                    <option value="70">70</option>
+                </select>kg
+            </label>
+            <label>体态
+                <select ng-model="searchedinfo.character.posture">
+                    <option value="胖">胖</option>
+                    <option value="微胖">微胖</option>
+                    <option value="适中">适中</option>
+                    <option value="偏瘦">偏瘦</option>
+                    <option value="瘦">瘦</option>
+                </select>
+            </label>
+        </div>
+        <p class="tips0">请尽量输入姓名，电话等较精确的信息进行搜索，可以尽快帮您找到需要寻找的人</p>
+    </div>
+    <a class="green-btn" ng-click="startSearch()">搜索寻人</a>
+</div>

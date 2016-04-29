@@ -1,0 +1,17 @@
+<!--自报平安-确认页-->
+<div class="bg">
+    <h4>自报平安信息</h4>
+    <div class="card-info">
+        <p>姓名<span>{{checkinfo.name}}</span></p>
+        <p>性别<span>{{checkinfo.sex}}</span></p>
+        <p>年龄<span>{{checkinfo.age}}</span></p>
+        <a class="card-head">
+            <img ng-src="{{checkinfo.images[0]}}">
+        </a>
+        <p>联系电话<span>{{checkinfo.phone}}</span></p>
+        <p>所在地址<span>{{checkinfo.address}}</span></p>
+        <p>备注说明<span class="remark">{{checkinfo.remark}}</span></p>
+    </div>
+    <a class="alter-btn" href="#/safereport">修改</a>
+    <a class="submit-btn" ng-click="submit()">提交</a>
+</div>

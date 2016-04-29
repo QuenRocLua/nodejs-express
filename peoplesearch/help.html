@@ -1,18 +1,23 @@
 <!--发布寻人-被寻者填写-->
 <div class="bg">
-    <h4>被寻者信息<span>（标*为必填选项）</span></h4>
+    <h4>被助者信息<span>（标*为必填选项）</span></h4>
     <div class="info">
         <label>姓名*
-            <input type="text" id="name" ng-model="person.name">
+            <input type="text" id="name" ng-model="helped.name">
         </label>
         <label>性别*
-            <input type="radio" name="sex" value="男" ng-model="person.sex">男
-            <input type="radio" name="sex" value="女" ng-model="person.sex">女
+            <input type="radio" name="sex" value="男" ng-model="helped.sex">男
+            <input type="radio" name="sex" value="女" ng-model="helped.sex">女
         </label>
         <label>年龄*
-            <input type="number" id="age" ng-model="person.age">
+            <input type="number" id="age" ng-model="helped.age">
         </label>
-        <label>被寻者照片<span>（最多可上传6张）</span></label>
+        <label>地址*
+            <input type="text" ng-model="helped.address">
+        </label>
+        <label>被助者照片
+            <span>（最多可上传6张）</span>
+        </label>
         <ul class="photo-contain">
             <li>
                 <img src="images/pic.jpg">
@@ -31,24 +36,26 @@
                 <input type="file">
             </li>
         </ul>
-        <label>基本特征<span>（至少填1项，有利于信息匹配）</span></label>
+        <label>基本特征
+            <span>（至少填1项，有利于信息匹配）</span>
+        </label>
         <div class="body-shape">
             <label>身高
-                <select ng-model="person.character.height">
+                <select ng-model="helped.character.height">
                     <option value="160">160</option>
                     <option value="170">170</option>
                     <option value="180">180</option>
                 </select>cm
             </label>
             <label>体重
-                <select ng-model="person.character.weight">
+                <select ng-model="helped.character.weight">
                     <option value="50">50</option>
                     <option value="60">60</option>
                     <option value="70">70</option>
                 </select>kg
             </label>
             <label>体态
-                <select ng-model="person.character.posture">
+                <select ng-model="helped.character.posture">
                     <option value="胖">胖</option>
                     <option value="微胖">微胖</option>
                     <option value="适中">适中</option>
@@ -57,9 +64,7 @@
                 </select>
             </label>
         </div>
-        <label>备注说明<textarea ng-model="person.remark"></textarea></label>
+        <label>备注说明<textarea ng-model="helped.remark"></textarea></label>
     </div>
     <a class="green-btn" id="test1" ng-click="goNext()">下一步</a>
 </div>
-
-<!-- <p class="errortip" role="alert" id="errortip" style="display: none"></p> -->
